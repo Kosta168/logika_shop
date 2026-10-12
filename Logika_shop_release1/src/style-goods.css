@@ -1,0 +1,250 @@
+/* Загальні стилі */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2e2e2e;
+    text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Хедер */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 0;
+    background-color: #3b3b3b;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* для мобільних */
+}
+
+#cart-count1{
+    text-decoration: none;
+    color: #000;
+}
+
+#pohot {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/* Кнопки в хедері */
+.btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.cart{
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+/* Секції товарів */
+.phones {
+    background-color: #3b3b3b;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+
+.phones-title{
+    background-color: #3b3b3b;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.phones-title {
+    display: inline-block;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.phones-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* для мобільних */
+}
+
+.phone-card {
+    background-color: #bfbfbfe3;
+    border-radius: 15px;
+    padding: 15px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* плавність */
+}
+
+.phone-card img {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* плавність картинки */
+}
+
+.phone-card:hover {
+    transform: scale(1.07); /* збільшення всієї картки */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.phone-card:hover img {
+    transform: scale(1.05); /* легке збільшення зображення */
+}
+
+
+.phone-name {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    text-align: center;
+}
+
+.price-buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.phone-price {
+    font-size: 15px;
+}
+
+.buy-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.buy-btn:hover {
+    background-color: #333;
+}
+
+/* Футер */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #3b3b3b;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 20px;
+    flex-wrap: wrap; /* для мобільних */
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-contacts,
+.footer-socials {
+    margin: 0 auto;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: left;
+    width: fit-content;
+}
+
+.footer-socials {
+    text-align: center;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-icons img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+}
+
+.footer-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-right {
+    background-color: #dcdcdc;
+    flex: 1;
+    border-radius: 10px;
+    height: 200px;
+}
+
+/* Адаптація під телефон */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .phones-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phone-card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-right {
+        width: 100%;
+        height: 250px;
+    }
+}

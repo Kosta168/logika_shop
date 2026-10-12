@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Logika Shop</title>
+    <link rel="icon" type="img/png" href="img/logo.png">
+</head>
+<body>
+<div class="container">
+
+    <!-- Хедер -->
+    <header>
+        <img src="img/logo.png" alt="logo" id="pohot">
+        <a class="btn trans" data-uk="Товари" href="goods.html">Товари</a>
+        <a class="btn" href="index.html" data-ua="Головна">Головна</a>
+        <a class="btn" href="#" data-ua="Підтримка">Підтримка</a>
+
+        <!-- Кнопка перемикання мови -->
+        <a class="btn" href="cart_Eng.html">EN</a>
+    </header>
+
+    <!-- Кошик -->
+    <section class="aaa">
+        <p class="section-title" data-ua="Ваш кошик">Ваш кошик</p>
+
+        <div id="cart-items" class="section-text">
+            <script src="script.js"></script>
+        </div>
+
+        <div id="cart-total" class="section-text" style="margin-top:20px;" 
+             data-ua="Загальна сума: 0 грн">
+            Загальна сума: 0 грн
+        </div>
+
+        <button id="checkout-btn" class="btn" style="margin-top:20px;"
+                data-ua="Перейти до оформлення замовлення">
+            Перейти до оформлення замовлення
+        </button>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-left">
+            <div class="footer-contacts" 
+                 data-ua="Номер підтримки:<br> +380 304 14 80<br> +380 452 50 88">
+                Номер підтримки:<br> +380 304 14 80<br> +380 452 50 88
+            </div>
+            <div class="footer-socials" data-ua="Наші соцмережі">Наші соцмережі</div>
+            <div class="footer-icons">
+                <img src="img/img1.png" alt="">
+                <img src="img/img2.png" alt="">
+                <img src="img/img3.png" alt="">
+            </div>
+        </div>
+        <div class="footer-right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252.51171864259226!2d22.717144043503037!3d48.4384954401031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4739ab7c7f4ee8a3%3A0xb3345047fdd6d0d8!2sLogika!5e0!3m2!1sen!2sua!4v1754506977850!5m2!1sen!2sua" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+</div>
+
+<!-- Модальне вікно -->
+<div id="checkout-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal" class="close">&times;</span>
+    <h2>Оформлення замовлення</h2>
+    <form id="order-form">
+      <label>Ім’я:</label>
+      <input type="text" id="firstName" required>
+
+      <label>Прізвище:</label>
+      <input type="text" id="lastName" required>
+
+      <label>Адреса:</label>
+      <input type="text" id="address" required>
+
+      <label>Спосіб доставки:</label>
+      <select id="delivery" required>
+        <option value="">Оберіть спосіб</option>
+        <option value="nova">Нова пошта</option>
+        <option value="ukr">Укрпошта</option>
+      </select>
+
+      <button type="submit" class="modal-btn">Підтвердити замовлення</button>
+    </form>
+  </div>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>

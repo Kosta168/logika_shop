@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Logika Shop</title>
+    <link rel="icon" type="img/png" href="img/logo.png">
+</head>
+<body>
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <img src="img/logo.png" alt="logo" id="pohot">
+        <a class="btn trans" data-en="Products" href="goods.html">Products</a>
+        <a class="btn" href="index.html" data-en="Home">Home</a>
+        <a class="btn" href="#" data-en="Support">Support</a>
+
+        <!-- Language toggle button -->
+         <a class="btn" href="cart.html">UA</a>
+    </header>
+
+    <!-- Cart -->
+    <section class="aaa">
+        <p class="section-title" data-en="Your cart">Your cart</p>
+
+        <div id="cart-items" class="section-text">
+            <script src="script.js"></script>
+        </div>
+
+        <div id="cart-total" class="section-text" style="margin-top:20px;" 
+             data-en="Total amount: 0 UAH">
+            Total amount: 0 UAH
+        </div>
+
+        <button id="checkout-btn" class="btn" style="margin-top:20px;"
+                data-en="Proceed to checkout">
+            Proceed to checkout
+        </button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <div class="footer-contacts" 
+                 data-en="Support number:<br> +380 304 14 80<br> +380 452 50 88">
+                Support number:<br> +380 304 14 80<br> +380 452 50 88
+            </div>
+            <div class="footer-socials" data-en="Our social networks">Our social networks</div>
+            <div class="footer-icons">
+                <img src="img/img1.png" alt="">
+                <img src="img/img2.png" alt="">
+                <img src="img/img3.png" alt="">
+            </div>
+        </div>
+        <div class="footer-right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252.51171864259226!2d22.717144043503037!3d48.4384954401031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4739ab7c7f4ee8a3%3A0xb3345047fdd6d0d8!2sLogika!5e0!3m2!1sen!2sua!4v1754506977850!5m2!1sen!2sua" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+</div>
+
+<!-- Modal window -->
+<div id="checkout-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal" class="close">&times;</span>
+    <h2>Checkout</h2>
+    <form id="order-form">
+      <label>First name:</label>
+      <input type="text" id="firstName" required>
+
+      <label>Last name:</label>
+      <input type="text" id="lastName" required>
+
+      <label>Address:</label>
+      <input type="text" id="address" required>
+
+      <label>Delivery method:</label>
+      <select id="delivery" required>
+        <option value="">Choose delivery method</option>
+        <option value="nova">Nova Poshta</option>
+        <option value="ukr">Ukrposhta</option>
+      </select>
+
+      <button type="submit" class="modal-btn">Confirm order</button>
+    </form>
+  </div>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>
